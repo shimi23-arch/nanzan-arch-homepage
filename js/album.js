@@ -13,7 +13,7 @@ fetch(jsonUrl)
       link.setAttribute('data-pswp-width', item.width || 800);
       link.setAttribute('data-pswp-height', item.height || 600);
 
-      const img = document.creatElement('img');
+      const img = document.createElement('img');
       img.src = item.src;
       img.alt = item.name;
       img.style.width = "150px";
