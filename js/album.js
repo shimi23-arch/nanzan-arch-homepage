@@ -1,4 +1,4 @@
-const jsonUrl = "https://script.google.com/macros/s/AKfycbxPYobacfKL2o5KzVY9VtHXxU1dvvrsm9L1BzwbefKMyhp5knm4tqk9rTEa5Doxdk5GJA/exec";
+const jsonUrl = "https://script.google.com/macros/s/AKfycbyGHVozroQs-kKpO7InuWJQ8PTqfjnsEJ8JC6AcgWLc3llFiCHDXzObL99dDFSLKmAsww/exec";
 
 fetch(jsonUrl)
   .then(res => res.json())
