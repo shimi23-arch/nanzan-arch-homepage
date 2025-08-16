@@ -1,35 +1,37 @@
-import PhotoSwipeLightbox from './photoswipe-lightbox.esm.js';
-
-const jsonUrl = "https://script.google.com/macros/s/AKfycbyGHVozroQs-kKpO7InuWJQ8PTqfjnsEJ8JC6AcgWLc3llFiCHDXzObL99dDFSLKmAsww/exec";
-
-const galleryEl = document.getElementById('gallery');
+const jsonUrl = "https://script.google.com/macros/s/AKfycbw_DhaLRpVKacitPH6c1_Smk6ZJ8rskDQutwDguVafAVP-rrko2aUNaSIpQMH3Uq5yD2Q/exec";
 
 fetch(jsonUrl)
   .then(res => res.json())
   .then(data => {
+    const galleryEl = document.getElementById('gallery');
+    
     data.forEach(item => {
       const link = document.createElement('a');
       link.href = item.src;
-      link.setAttribute('data-pswp-width', item.width || 800);
-      link.setAttribute('data-pswp-height', item.height || 600);
+      link.dataset.pswpWidth = 800;
+      link.dataset.pswpHeight 600;
 
       const img = document.createElement('img');
       img.src = item.src;
       img.alt = item.name;
-      img.style.width = "150px";
 
       link.appendChild(img);
       galleryEl.appendChild(link);
     });
 
-    const lightbox = new PhotoSwipeLightbox({
-      gallery: '#gallery',
-      children: 'a',
-      pswpModule: () => import('./photoswipe.esm.js')
+    const pswpElement = document.createElement('div');
+    pswpElement.className = 'pswp';
+    document.body.appendChild(pswpElement);
+
+    gallery.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetLink = event.target.closest('a');
+      if (!targetLink) return;
+
+      const items = data.map(i => ({ src: i.src, w: 800, h: 600 }));
+      const index = Array.from(gallery.children).indexOf(targetLink);
+      const galleryInstance = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, { index });
+      galleryInstance.init();
     });
-    lightbox.init();
   })
-.catch(err => {
-  console.error("JSON取得失敗:", err);
-});
-        
+  .catch(err => console.error("JSON取得失敗:", err));
