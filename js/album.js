@@ -1,5 +1,5 @@
 import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
-const jsonUrl = "https://script.google.com/macros/s/AKfycbw_DhaLRpVKacitPH6c1_Smk6ZJ8rskDQutwDguVafAVP-rrko2aUNaSIpQMH3Uq5yD2Q/exec";
+const jsonUrl = "https://script.google.com/macros/s/AKfycbxEFQfhNbcAmrF0XeGcYW0yjnnGdghzE4xmmWlFYURDEXgagc8Efg-Kj9wEEsE2gIXgEA/exec";
 
 fetch(jsonUrl)
   .then(res => res.json())
