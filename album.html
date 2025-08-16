@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head 
-    <meta charset="UTF-8">
-    <title>部活アルバム</title>
-    <link rel="stylesheet" href="css/photoswipe.css">
-    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
-    <script src="https://unpkg.com/photoswipe@5/dist/photoswipe.umd.js"></script>
-  </head>
-  <body>
-    <h1>部活アルバム</h1>
-    <a href="index.html">メインに戻る</a>
+<head>
+  <meta charset="UTF-8">
+  <title>部活アルバム</title>
+  <link rel="stylesheet" href="css/photoswipe.css">
+  <style>
+    .event-section { margin-bottom: 40px; }
+    .event-gallery img { width: 200px; margin: 5px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>部活アルバム</h1>
+  <a href="index.html">メインに戻る</a>
 
-    <div class="my-gallery" id="gallery"></div>
+  <div id="gallery"></div>
 
-    <script type ="module" src="js/album.js"></script>
-  </body>
+  <script type="module" src="js/album.js"></script>
+</body>
 </html>
