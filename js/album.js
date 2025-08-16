@@ -42,6 +42,6 @@ fetch(jsonUrl)
       pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
     });
     lightbox.init();
-  })
+  });
   .catch(err => console.error("JSON取得失敗:", err));
 
