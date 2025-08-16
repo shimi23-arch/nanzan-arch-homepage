@@ -9,7 +9,7 @@ fetch(jsonUrl)
       const link = document.createElement('a');
       link.href = item.src;
       link.dataset.pswpWidth = 800;
-      link.dataset.pswpHeight 600;
+      link.dataset.pswpHeight = 600;
 
       const img = document.createElement('img');
       img.src = item.src;
