@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アルバム表示テスト</title>
+  <link rel="stylesheet" href="css/photoswipe.css">
+</head>
+<body>
+  <h1>アルバム表示テスト</h1>
+
+  <div id="gallery"></div>
+
+  <script src="js/photoswipe.min.js"></script>
+  <script src="js/photoswipe-ui-default.min.js"></script>
+  <script>
+    // JSON URL（Apps Script WebアプリURL）
+    const jsonUrl = "https://script.google.com/macros/s/xxxx/exec";
+
+    fetch(jsonUrl)
+      .then(res => res.json())
+      .then(data => {
+        const gallery = document.getElementById('gallery');
+
+        data.forEach(item => {
+          const link = document.createElement('a');
+          link.href = item.src;
+          link.textContent = item.name; // 画像が出ない場合は名前で確認
+          link.style.display = "block";
+          gallery.appendChild(link);
+        });
+
+        console.log("JSON読み込み完了:", data);
+      })
+      .catch(err => console.error("JSON取得失敗:", err));
+  </script>
+</body>
+</html>
