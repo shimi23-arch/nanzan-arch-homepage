@@ -1,3 +1,4 @@
+import PhotoSwipeLightbox from './photoswipe-lightbox.esm.js';
 const jsonUrl = "https://script.google.com/macros/s/AKfycbxnEqU0Tmg6q7OMzu2t2uAT8ea7myHPO1WU1B83lYFDHtRvHdoV5HoxJjiaTEITpnLVOg/exec";
 
 fetch(jsonUrl)
