@@ -1,18 +1,12 @@
-import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
-const jsonUrl ="https://script.google.com/macros/s/AKfycbxv3uAjuIrGsjyDyEsaQMzqtbH-N_xYYQw4jVKp940aZjtNwFgXF7qSGAOlwZHrOMHYww/exec";
-
+const jsonUrl = "https://script.google.com/macros/s/AKfycbxnEqU0Tmg6q7OMzu2t2uAT8ea7myHPO1WU1B83lYFDHtRvHdoV5HoxJjiaTEITpnLVOg/exec";
 
 fetch(jsonUrl)
   .then(res => res.json())
   .then(data => {
-    console.log("取得したJSON:", data);
-
     const galleryEl = document.getElementById('gallery');
 
     data.forEach(eventData => {
-      console.log("行事:", eventData.event, "写真枚数:", eventData.photos.length);
-
-      // 行事ごとに区切る
+      // 行事ごとにセクション作成
       const section = document.createElement('div');
       section.className = "event-section";
 
@@ -25,8 +19,6 @@ fetch(jsonUrl)
       section.appendChild(eventGallery);
 
       eventData.photos.forEach(item => {
-        console.log("画像URL:", item.src);
-
         const link = document.createElement('a');
         link.href = item.src;
         link.dataset.pswpWidth = 800;
@@ -43,7 +35,7 @@ fetch(jsonUrl)
       galleryEl.appendChild(section);
     });
 
-    // PhotoSwipe 初期化
+    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
     const lightbox = new PhotoSwipeLightbox({
       gallery: '.event-gallery',
       children: 'a',
