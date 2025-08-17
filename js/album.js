@@ -1,4 +1,4 @@
-const jsonUrl = "https://script.google.com/macros/s/AKfycbxEFQfhNbcAmrF0XeGcYW0yjnnGdghzE4xmmWlFYURDEXgagc8Efg-Kj9wEEsE2gIXgEA/exec";
+const jsonUrl = "https://script.google.com/macros/s/AKfycbzRf8_dK3kQKQP-23V1LdJ_kyIbFljtrP14cYzB2aIj4Y35HD0GBJbvXyU_lQKEUHG01A/exec";
 
 fetch(jsonUrl)
   .then(res => res.json())
@@ -42,6 +42,6 @@ fetch(jsonUrl)
       pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
     });
     lightbox.init();
-  });
+  })
   .catch(err => console.error("JSON取得失敗:", err));
 
