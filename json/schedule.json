@@ -3,7 +3,10 @@
     "type": "行事",
     "title": "運動会",
     "date": "2025-09-20",
-    "description": "みんなで楽しく運動会を行います。場所: 校庭"
+    "description": "みんなで楽しく運動会を行います。場所: 校庭",
+    "documents": [
+      { "title": "要項", "file": "https://raw.githubusercontent.com/shimi23-arch/nanzan-arch-homepage/2025年_東海王座要項.pdf" }
+    ]
   },
   {
     "type": "連絡",
