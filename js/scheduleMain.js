@@ -1,4 +1,4 @@
-const jsonUrl = "schedule.json"; // GitHubに置いたJSONのパス
+const jsonUrl = "json/schedule.json"; // GitHubに置いたJSONのパス
 
 fetch(jsonUrl)
   .then(res => res.json())
