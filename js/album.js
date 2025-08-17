@@ -1,3 +1,4 @@
+import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
 const jsonUrl = "https://script.google.com/macros/s/AKfycbzRf8_dK3kQKQP-23V1LdJ_kyIbFljtrP14cYzB2aIj4Y35HD0GBJbvXyU_lQKEUHG01A/exec";
 
 fetch(jsonUrl)
@@ -39,7 +40,6 @@ fetch(jsonUrl)
     const lightbox = new PhotoSwipeLightbox({
       gallery: '.event-gallery',
       children: 'a',
-      pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
     });
     lightbox.init();
   })
