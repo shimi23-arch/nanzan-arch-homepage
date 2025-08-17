@@ -35,11 +35,11 @@ fetch(jsonUrl)
       galleryEl.appendChild(section);
     });
 
-    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+    
     const lightbox = new PhotoSwipeLightbox({
       gallery: '.event-gallery',
       children: 'a',
-      pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
+      pswpModule: () => import('./photoswipe.esm.js')
     });
     lightbox.init();
   })
