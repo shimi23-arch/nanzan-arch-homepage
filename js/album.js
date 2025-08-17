@@ -24,7 +24,7 @@ fetch(jsonUrl)
       section.appendChild(eventGallery);
 
       eventData.photos.forEach(item => {
-        console.log("画像追加:", item.src);
+        console.log("画像URL:", item.src);
 
         const link = document.createElement('a');
         link.href = item.src;
