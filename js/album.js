@@ -4,44 +4,32 @@ const jsonUrl = "https://script.google.com/macros/s/AKfycbzRf8_dK3kQKQP-23V1LdJ_
 fetch(jsonUrl)
   .then(res => res.json())
   .then(data => {
+    console.log("取得したJSON:", data); // ← デバッグ用
     const galleryEl = document.getElementById('gallery');
 
-    data.forEach(eventData => {
-      // 行事ごとに区切る
-      const section = document.createElement('div');
-      section.className = "event-section";
+    data.forEach(item => {
+      const link = document.createElement('a');
+      link.href = item.src;
+      link.dataset.pswpWidth = 800;
+      link.dataset.pswpHeight = 600;
 
-      const title = document.createElement('h2');
-      title.textContent = eventData.event;
-      section.appendChild(title);
+      const img = document.createElement('img');
+      img.src = item.src;
+      img.alt = item.name;
+      img.style.width = "200px"; // サムネイル用
+      img.style.margin = "5px";
+      img.style.borderRadius = "8px";
 
-      const eventGallery = document.createElement('div');
-      eventGallery.className = 'event-gallery';
-      section.appendChild(eventGallery);
-
-      eventData.photos.forEach(item => {
-        const link = document.createElement('a');
-        link.href = item.src;
-        link.dataset.pswpWidth = 800;
-        link.dataset.pswpHeight = 600;
-
-        const img = document.createElement('img');
-        img.src = item.src;
-        img.alt = item.name;
-
-        link.appendChild(img);
-        eventGallery.appendChild(link);
-      });
-
-      galleryEl.appendChild(section);
+      link.appendChild(img);
+      galleryEl.appendChild(link);
     });
 
     // PhotoSwipe 初期化
     const lightbox = new PhotoSwipeLightbox({
-      gallery: '.event-gallery',
+      gallery: '#gallery',
       children: 'a',
+      pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
     });
     lightbox.init();
   })
   .catch(err => console.error("JSON取得失敗:", err));
-
