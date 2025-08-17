@@ -1,12 +1,14 @@
 [
   {
-    "event": "test",
-    "link": "https://photos.app.goo.gl/DdfbGjawvr9esgDj9",
-    "thumbnail": "https://drive.google.com/file/d/1nrn-cLh-8mbnjQXj9svvgiJ6JA48j62w/view?usp=drive_link"
+    "event": "運動会",
+    "description": "みんなで楽しく運動会をしました",
+    "link": "https://photos.app.goo.gl/xxxxxx",
+    "thumbnail": "images/undoukai_thumb.jpg"
   },
   {
     "event": "文化祭",
+    "description": "文化祭では演劇と展示を行いました",
     "link": "https://photos.app.goo.gl/yyyyyy",
-    "thumbnail": "https://drive.google.com/uc?export=view&id=DRIVE_FILE_ID2"
+    "thumbnail": "images/bunkasai_thumb.jpg"
   }
 ]
