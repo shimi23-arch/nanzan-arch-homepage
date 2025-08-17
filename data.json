@@ -2,14 +2,25 @@
   {
     "event": "運動会",
     "description": "みんなで楽しく運動会をしました",
-    "link": "https://photos.app.goo.gl/DdfbGjawvr9esgDj9",
-    "thumbnail": "https://raw.githubusercontent.com/shimi23-arch/nanzan-arch-homepage/3815b5bc77be8141b508aa54d92c02490ca4bd58/P1080342.JPG
-"
+    "photos": [
+      {
+        "thumbnail": "https://raw.githubusercontent.com/shimi23-arch/nanzan-arch-homepage/main/images/undoukai1_thumb.jpg",
+        "link": "https://photos.app.goo.gl/xxxxxx"
+      },
+      {
+        "thumbnail": "https://raw.githubusercontent.com/shimi23-arch/nanzan-arch-homepage/main/images/undoukai2_thumb.jpg",
+        "link": "https://photos.app.goo.gl/yyyyyy"
+      }
+    ]
   },
   {
     "event": "文化祭",
     "description": "文化祭では演劇と展示を行いました",
-    "link": "https://photos.app.goo.gl/yyyyyy",
-    "thumbnail": "images/bunkasai_thumb.jpg"
+    "photos": [
+      {
+        "thumbnail": "https://raw.githubusercontent.com/shimi23-arch/nanzan-arch-homepage/main/images/bunkasai1_thumb.jpg",
+        "link": "https://photos.app.goo.gl/zzzzzz"
+      }
+    ]
   }
 ]
