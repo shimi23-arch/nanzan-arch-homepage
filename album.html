@@ -4,45 +4,19 @@
   <meta charset="UTF-8">
   <title>部活アルバム</title>
   <style>
-    body {
-      font-family: sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .event-section {
-      margin-bottom: 40px;
-      text-align: center;
-    }
-
-    .event-section h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-    }
-
-    .event-description {
-      font-size: 1em;
-      margin-bottom: 10px;
-      color: #555;
-    }
-
-    .event-section img {
-      width: 250px;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .event-section img:hover {
-      transform: scale(1.05);
-    }
+    .event-section { margin-bottom: 40px; }
+    .event-section h2 { margin-bottom: 5px; }
+    .event-description { margin-bottom: 10px; font-style: italic; }
+    .event-gallery img { width: 150px; margin: 5px; border-radius: 8px; cursor: pointer; }
   </style>
 </head>
 <body>
   <h1>部活アルバム</h1>
+  <a href="index.html">メインに戻る</a>
+
   <div id="gallery"></div>
 
-  <script src="js/album.js"></script>
+  <script type="module" src="album.js"></script>
 </body>
 </html>
+
